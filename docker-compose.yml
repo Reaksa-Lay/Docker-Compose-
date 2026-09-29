@@ -1,0 +1,14 @@
+services:
+  registration-service:
+    build: ./registration-service
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./registration-service/.env
+
+  login-service:
+    build: ./login-service
+    ports:
+      - "5002:5002"
+    env_file:
+      - ./login-service/.env
